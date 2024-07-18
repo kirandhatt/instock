@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.page-container {
+  @include desktop {
+    max-width: $max-width;
+    margin: auto;
+  }
+}

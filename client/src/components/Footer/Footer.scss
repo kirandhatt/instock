@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  margin-bottom: 2.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    @include text-bodySmall;
+    color: $slate;
+  }
+}

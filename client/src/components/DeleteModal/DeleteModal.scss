@@ -1,0 +1,74 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.delete {
+  &__icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    padding: 3.75rem 1rem 1.5rem;
+
+    @include tablet {
+      height: 16.375rem;
+      width: 42rem;
+      top: 11.5625rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 2.5rem 4rem;
+      border-radius: 0.1875rem;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    background-color: rgb(19, 24, 44, 0.7);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: $white;
+    border: none;
+  }
+
+  &__text {
+    @include text-bodyLarge;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    gap: 1.0625rem;
+
+    @include tablet {
+      align-self: flex-end;
+      width: auto;
+    }
+  }
+}

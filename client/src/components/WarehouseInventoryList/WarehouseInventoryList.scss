@@ -1,0 +1,37 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.warehouse-inventory-list {
+
+    &__grid {
+        display: grid;
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr 1fr 0.8fr;
+            column-gap: 2rem;
+        }
+    }
+
+    &__header {
+        display: none;
+        @include tablet{
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: 1/6;
+            padding: 0.7rem 2rem;
+            background-color: $light-grey;
+        }
+        &-label {
+            @include tablet {
+                white-space: nowrap;
+                &--align {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        vertical-align: middle;
+        width: 1rem;
+    }
+}

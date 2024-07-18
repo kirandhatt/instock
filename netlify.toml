@@ -1,6 +1,4 @@
 [build]
-  functions = "server"
+  command = "npm run build"
   publish = "client/build"
-
-[functions]
-  directory = "server"
+  functions = "server"

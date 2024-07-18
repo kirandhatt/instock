@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.warehouse-list {
+  @include page-formatting;
+
+  &__grid {
+    display: grid;
+    @include tablet {
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 2rem;
+    }
+    @include desktop {
+      column-gap: 5rem;
+    }
+  }
+
+  &__header {
+    display: none;
+    @include tablet {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / 6;
+      padding: 0.7rem 2rem;
+      background-color: $light-grey;
+    }
+    &-label {
+      @include tablet {
+        white-space: nowrap;
+        &--align {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    width: 1rem;
+  }
+}

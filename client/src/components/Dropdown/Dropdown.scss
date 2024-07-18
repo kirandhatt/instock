@@ -1,0 +1,28 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.label{
+    @include text-label;
+}
+
+.dropdown{
+    background: url("/src/assets/images/icons/arrow_drop_down-24px.svg") no-repeat right center;
+
+
+    @include formFields;
+}
+
+.dropdown.active{
+
+    border-color: $instock-indigo;
+
+
+}
+
+.dropdown.required{
+
+    border-color: $red;
+
+
+}

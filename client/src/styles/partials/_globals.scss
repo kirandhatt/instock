@@ -1,0 +1,17 @@
+@use './mixins' as *;
+
+h1 {
+    @include text-header;
+}
+
+h2 {
+    @include text-subheader;
+}
+
+h3, label, a {
+    @include text-label;
+}
+
+h4 {
+    @include text-tableHeader;
+}
